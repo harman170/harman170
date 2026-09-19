@@ -2,15 +2,15 @@
 
 ### Full-Stack Developer | AI & ML Enthusiast | Flutter Developer | B.Tech CSE (AI/ML) Student
 
-Detail-oriented **B.Tech CSE (AI/ML)** student at Akal University with a **9.3 CGPA**. Experienced in **Full-Stack Web Development (MERN)**, **Machine Learning**, and **Mobile App Development (Flutter & Firebase)**. Former **Web Development Trainee at Sun Soft Technologies**, **Smart India Hackathon 2025** National Finalist, and **GSSoC 2025** Open Source Contributor.
+Detail-oriented **B.Tech CSE (AI/ML)** student at Akal University with a **9.0 CGPA**. Experienced in **Full-Stack Web Development (MERN)**, **Machine Learning**, and **Mobile App Development (Flutter & Firebase)**. Former **Web Development Trainee at Sun Soft Technologies**, **Smart India Hackathon 2025** National Finalist, and **GSSoC 2025** Open Source Contributor.
 
 Passionate about building scalable web applications, intelligent ML models, and smooth cross-platform mobile experiences that solve real-world problems.
 
 📫 **Reach out to me:**
-[![Email](https://img.shields.io/badge/Email-harmanjotk1740%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harmanjotk1740@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Harmanjot_Kaur-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harmanjot-kaur)
+[![Email](https://img.shields.io/badge/Email-harmanjotk173%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harmanjotk173@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Harmanjot_Kaur-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harman-jot-kaur-a97aa7314/)
 [![GitHub](https://img.shields.io/badge/GitHub-harman170-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/harman170)
-[![Codeforces](https://img.shields.io/badge/Codeforces-harman170-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com)
+[![Codeforces](https://img.shields.io/badge/Codeforces-Harmanjot__Kaur123-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Harmanjot_Kaur123)
 
 ---
 
@@ -60,7 +60,7 @@ Passionate about building scalable web applications, intelligent ML models, and 
 - 👩‍💻 **GirlScript Summer of Code (GSSoC 2025)**: Selected as an open-source contributor.
 - 🎤 **IEEE Conference Presenter**: Presented research at the International Conference C2A-2026.
 - 🌐 **CISTM-2025**: Attended International Conference on Information Systems and Technology Management.
-- 🎓 **Academic Excellence**: Maintaining **9.3 CGPA** in B.Tech CSE (AI/ML) at Akal University.
+- 🎓 **Academic Excellence**: Maintaining **9.0 CGPA** in B.Tech CSE (AI/ML) at Akal University.
 
 ---
 
@@ -72,19 +72,6 @@ Passionate about building scalable web applications, intelligent ML models, and 
 | 📢 **CSE NoticeHub** | Centralized department notification system with real-time chat, media support, and authentication. | Flutter, Dart, Firebase | [View Profile](https://github.com/harman170) |
 | 🍷 **Wine Quality Prediction** | Comparative study evaluating 24 ML classification models to identify highest accuracy predictor. | Python, Scikit-learn, Pandas, Seaborn | [View Repo](https://github.com/harman170/Chatbot_With_Machine_Learning_Based_Intent_Classification) |
 | 🤝 **NextHope** | Full-Stack volunteer coordination & job assistance portal with role-based access control. | Node.js, Express, MongoDB, JWT | [View Repo](https://github.com/harman170) |
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=harman170&show_icons=true&theme=tokyonight&count_private=true" alt="Harmanjot's GitHub Stats" height="175"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harman170&layout=compact&theme=tokyonight&hide=html" alt="Top Languages" height="175"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=harman170&theme=tokyonight" alt="GitHub Streak" />
-</p>
 
 ---
 
