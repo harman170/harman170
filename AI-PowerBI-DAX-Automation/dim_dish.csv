@@ -1,0 +1,11 @@
+dish_id,dish_name,category,price,restaurant_id
+301,Butter Chicken,Main Course,350.0,201
+302,Paneer Tikka,Starter,280.0,201
+303,Hakka Noodles,Main Course,220.0,202
+304,Dim Sum Basket,Starter,250.0,202
+305,Margherita Pizza,Main Course,399.0,203
+306,Chicken Alfredo Pasta,Main Course,420.0,203
+307,Double Cheese Burger,Main Course,199.0,204
+308,French Fries,Sides,99.0,204
+309,Special Chicken Biryani,Main Course,320.0,205
+310,Mirchi Ka Salan,Sides,80.0,205

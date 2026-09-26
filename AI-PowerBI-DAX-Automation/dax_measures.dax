@@ -1,0 +1,258 @@
+// =========================================================================
+// AI-GENERATED DAX MEASURES LIBRARY (75+ MEASURES)
+// Project: AI + Power BI DAX & Star Schema Modeling via MCP
+// Dataset: Swiggy Food Delivery Analytics
+// Author: Harmanjot Kaur
+// =========================================================================
+
+// -------------------------------------------------------------------------
+// SECTION 1: CORE REVENUE & SALES METRICS (1-15)
+// -------------------------------------------------------------------------
+
+Total Gross Revenue = 
+SUMX('fact_orders', 'fact_orders'[quantity] * 'fact_orders'[unit_price])
+
+Total Discount = 
+SUM('fact_orders'[discount_amount])
+
+Total Net Revenue = 
+SUM('fact_orders'[total_amount])
+
+Avg Order Value (AOV) = 
+DIVIDE([Total Net Revenue], [Total Orders], 0)
+
+Avg Discount per Order = 
+DIVIDE([Total Discount], [Total Orders], 0)
+
+Discount Percentage = 
+DIVIDE([Total Discount], [Total Gross Revenue], 0)
+
+Delivered Revenue = 
+CALCULATE([Total Net Revenue], 'fact_orders'[order_status] = "Delivered")
+
+Cancelled Revenue Lost = 
+CALCULATE([Total Net Revenue], 'fact_orders'[order_status] = "Cancelled")
+
+Refunded Revenue = 
+CALCULATE([Total Net Revenue], 'fact_orders'[order_status] = "Refunded")
+
+Revenue Loss Rate % = 
+DIVIDE([Cancelled Revenue Lost] + [Refunded Revenue], [Total Gross Revenue], 0)
+
+Avg Revenue per Day = 
+DIVIDE([Total Net Revenue], DISTINCTCOUNT('dim_date'[full_date]), 0)
+
+Max Order Value = 
+MAX('fact_orders'[total_amount])
+
+Min Order Value = 
+MIN('fact_orders'[total_amount])
+
+UPI Revenue = 
+CALCULATE([Total Net Revenue], 'fact_orders'[payment_method] = "UPI")
+
+Credit Card Revenue = 
+CALCULATE([Total Net Revenue], 'fact_orders'[payment_method] = "Credit Card")
+
+
+// -------------------------------------------------------------------------
+// SECTION 2: ORDER VOLUME & PERFORMANCE METRICS (16-30)
+// -------------------------------------------------------------------------
+
+Total Orders = 
+COUNTROWS('fact_orders')
+
+Total Delivered Orders = 
+CALCULATE([Total Orders], 'fact_orders'[order_status] = "Delivered")
+
+Total Cancelled Orders = 
+CALCULATE([Total Orders], 'fact_orders'[order_status] = "Cancelled")
+
+Total Refunded Orders = 
+CALCULATE([Total Orders], 'fact_orders'[order_status] = "Refunded")
+
+Cancellation Rate % = 
+DIVIDE([Total Cancelled Orders], [Total Orders], 0)
+
+Delivery Fulfillment Rate % = 
+DIVIDE([Total Delivered Orders], [Total Orders], 0)
+
+Total Items Sold = 
+SUM('fact_orders'[quantity])
+
+Avg Items per Order = 
+DIVIDE([Total Items Sold], [Total Orders], 0)
+
+Weekend Orders = 
+CALCULATE([Total Orders], 'dim_date'[is_weekend] = 1)
+
+Weekday Orders = 
+CALCULATE([Total Orders], 'dim_date'[is_weekend] = 0)
+
+Weekend Orders Share % = 
+DIVIDE([Weekend Orders], [Total Orders], 0)
+
+UPI Payment Share % = 
+DIVIDE(CALCULATE([Total Orders], 'fact_orders'[payment_method] = "UPI"), [Total Orders], 0)
+
+COD Payment Share % = 
+DIVIDE(CALCULATE([Total Orders], 'fact_orders'[payment_method] = "Cash on Delivery"), [Total Orders], 0)
+
+Cards Payment Share % = 
+DIVIDE(CALCULATE([Total Orders], 'fact_orders'[payment_method] IN {"Credit Card", "Debit Card"}), [Total Orders], 0)
+
+Active Ordering Days = 
+DISTINCTCOUNT('fact_orders'[date_key])
+
+
+// -------------------------------------------------------------------------
+// SECTION 3: TIME INTELLIGENCE & YOY / MOM ANALYSIS (31-45)
+// -------------------------------------------------------------------------
+
+Revenue YTD = 
+TOTALYTD([Total Net Revenue], 'dim_date'[full_date])
+
+Revenue QTD = 
+TOTALQTD([Total Net Revenue], 'dim_date'[full_date])
+
+Revenue MTD = 
+TOTALMTD([Total Net Revenue], 'dim_date'[full_date])
+
+Revenue PY (Previous Year) = 
+CALCULATE([Total Net Revenue], SAMEPERIODLASTYEAR('dim_date'[full_date]))
+
+Revenue PM (Previous Month) = 
+CALCULATE([Total Net Revenue], DATEADD('dim_date'[full_date], -1, MONTH))
+
+Revenue YoY Growth = 
+[Total Net Revenue] - [Revenue PY]
+
+Revenue YoY Growth % = 
+DIVIDE([Revenue YoY Growth], [Revenue PY], 0)
+
+Revenue MoM Growth = 
+[Total Net Revenue] - [Revenue PM]
+
+Revenue MoM Growth % = 
+DIVIDE([Revenue MoM Growth], [Revenue PM], 0)
+
+Orders YTD = 
+TOTALYTD([Total Orders], 'dim_date'[full_date])
+
+Orders PY = 
+CALCULATE([Total Orders], SAMEPERIODLASTYEAR('dim_date'[full_date]))
+
+Orders YoY Growth % = 
+DIVIDE([Total Orders] - [Orders PY], [Orders PY], 0)
+
+Rolling 7 Day Revenue = 
+CALCULATE([Total Net Revenue], DATESINPERIOD('dim_date'[full_date], MAX('dim_date'[full_date]), -7, DAY))
+
+Rolling 30 Day Revenue = 
+CALCULATE([Total Net Revenue], DATESINPERIOD('dim_date'[full_date], MAX('dim_date'[full_date]), -30, DAY))
+
+Year-to-Date Cancellation Rate = 
+TOTALYTD([Cancellation Rate %], 'dim_date'[full_date])
+
+
+// -------------------------------------------------------------------------
+// SECTION 4: RESTAURANT & CUISINE ANALYTICS (46-60)
+// -------------------------------------------------------------------------
+
+Active Restaurants Count = 
+DISTINCTCOUNT('dim_restaurant'[restaurant_id])
+
+Avg Revenue per Restaurant = 
+DIVIDE([Total Net Revenue], [Active Restaurants Count], 0)
+
+Avg Orders per Restaurant = 
+DIVIDE([Total Orders], [Active Restaurants Count], 0)
+
+Avg Restaurant Rating = 
+AVERAGE('dim_restaurant'[rating])
+
+Top Cuisine by Revenue = 
+FIRSTNONEMPTY(TOPN(1, VALUES('dim_restaurant'[cuisine_type]), [Total Net Revenue], DESC), 1)
+
+Top Rated Restaurant Name = 
+FIRSTNONEMPTY(TOPN(1, VALUES('dim_restaurant'[restaurant_name]), [Avg Restaurant Rating], DESC), 1)
+
+South Region Revenue = 
+CALCULATE([Total Net Revenue], 'dim_location'[region] = "South")
+
+North Region Revenue = 
+CALCULATE([Total Net Revenue], 'dim_location'[region] = "North")
+
+West Region Revenue = 
+CALCULATE([Total Net Revenue], 'dim_location'[region] = "West")
+
+East Region Revenue = 
+CALCULATE([Total Net Revenue], 'dim_location'[region] = "East")
+
+Regional Revenue Contribution % = 
+DIVIDE([Total Net Revenue], CALCULATE([Total Net Revenue], ALL('dim_location')), 0)
+
+Main Course Category Revenue = 
+CALCULATE([Total Net Revenue], 'dim_dish'[category] = "Main Course")
+
+Starter Category Revenue = 
+CALCULATE([Total Net Revenue], 'dim_dish'[category] = "Starter")
+
+Sides Category Revenue = 
+CALCULATE([Total Net Revenue], 'dim_dish'[category] = "Sides")
+
+Top Selling Dish Name = 
+FIRSTNONEMPTY(TOPN(1, VALUES('dim_dish'[dish_name]), [Total Items Sold], DESC), 1)
+
+
+// -------------------------------------------------------------------------
+// SECTION 5: DELIVERY EFFICIENCY & SERVICE LEVEL METRICS (61-75)
+// -------------------------------------------------------------------------
+
+Avg Delivery Time (Mins) = 
+AVERAGE('fact_orders'[delivery_time_mins])
+
+Fast Deliveries Count (< 30 Mins) = 
+CALCULATE([Total Orders], 'fact_orders'[delivery_time_mins] < 30)
+
+Slow Deliveries Count (> 45 Mins) = 
+CALCULATE([Total Orders], 'fact_orders'[delivery_time_mins] > 45)
+
+Fast Delivery Share % = 
+DIVIDE([Fast Deliveries Count (< 30 Mins)], [Total Orders], 0)
+
+Slow Delivery Share % = 
+DIVIDE([Slow Deliveries Count (> 45 Mins)], [Total Orders], 0)
+
+Delivered Orders SLA % = 
+DIVIDE(CALCULATE([Total Delivered Orders], 'fact_orders'[delivery_time_mins] <= 45), [Total Delivered Orders], 0)
+
+Max Delivery Time = 
+MAX('fact_orders'[delivery_time_mins])
+
+Min Delivery Time = 
+MIN('fact_orders'[delivery_time_mins])
+
+Delivery Time Standard Deviation = 
+STDEV.P('fact_orders'[delivery_time_mins])
+
+Avg Delivery Time - South = 
+CALCULATE([Avg Delivery Time (Mins)], 'dim_location'[region] = "South")
+
+Avg Delivery Time - North = 
+CALCULATE([Avg Delivery Time (Mins)], 'dim_location'[region] = "North")
+
+Revenue per Delivery Minute = 
+DIVIDE([Total Net Revenue], SUM('fact_orders'[delivery_time_mins]), 0)
+
+Order Volume Target = 
+1500
+
+Order Target Achievement % = 
+DIVIDE([Total Orders], [Order Volume Target], 0)
+
+Revenue Target = 
+500000
+
+Revenue Target Achievement % = 
+DIVIDE([Total Net Revenue], [Revenue Target], 0)

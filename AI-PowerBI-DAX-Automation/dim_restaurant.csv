@@ -1,0 +1,8 @@
+restaurant_id,restaurant_name,cuisine_type,rating,location_id
+201,Spice Garden,Indian,4.5,101
+202,Dragon Noodle Bar,Chinese,4.2,102
+203,Pizza Italia,Italian,4.6,103
+204,Burger House,Fast Food,4.1,104
+205,Biryani Zone,Hyderabadi,4.8,105
+206,Sweet Tooth Bakery,Desserts,4.4,106
+207,Tandoori Nights,North Indian,4.3,107
