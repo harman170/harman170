@@ -68,9 +68,9 @@ Passionate about building scalable web applications, intelligent ML models, and 
 
 | Project | Description | Tech Stack | Repo Link |
 | :--- | :--- | :--- | :--- |
+| 📱 **CSE NoticeHub** | Centralized department notification system with real-time chat, media support, and authentication. | Flutter, Dart, Firebase, Android | [View App Repo](https://github.com/harman170/flash-chat-flutter) |
 | 🏦 **Bank Management System** | OOP Python console banking app with persistent JSON database, account generator & 4-digit PIN security. | Python, JSON, Jupyter / Colab | [Open Notebook](https://github.com/harman170/harman170/blob/main/Bank_Management_System.ipynb) |
 | 🏥 **Medicine Donation Platform** | MERN stack application for real-time synchronization between medical donors and recipients. | MongoDB, Express, React, Node.js, Render | [View Repo](https://github.com/harman170/medicare-frontend) |
-| 📢 **CSE NoticeHub** | Centralized department notification system with real-time chat, media support, and authentication. | Flutter, Dart, Firebase | [View Profile](https://github.com/harman170) |
 | 🍷 **Wine Quality Prediction** | Comparative study evaluating 24 ML classification models to identify highest accuracy predictor. | Python, Scikit-learn, Pandas, Seaborn | [View Repo](https://github.com/harman170/Chatbot_With_Machine_Learning_Based_Intent_Classification) |
 | 🤝 **NextHope** | Full-Stack volunteer coordination & job assistance portal with role-based access control. | Node.js, Express, MongoDB, JWT | [View Repo](https://github.com/harman170) |
 
