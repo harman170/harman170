@@ -40,7 +40,6 @@ Passionate about building scalable web applications, intelligent ML models, and 
 
 ### 🤖 AI, ML & Data Analytics
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
@@ -69,7 +68,7 @@ Passionate about building scalable web applications, intelligent ML models, and 
 
 | Project | Description | Tech Stack | Repo Link |
 | :--- | :--- | :--- | :--- |
-| 📊 **Claude AI + Power BI DAX & Star Schema** | AI-assisted data modeling, Star Schema, 25+ Date table & 75+ DAX KPI measures via MCP. | Power BI, Python, DAX, Claude AI, MCP | [View Repo](https://github.com/harman170/AI-PowerBI-DAX-Automation) |
+| 🏦 **Bank Management System** | OOP Python console banking app with persistent JSON database, account generator & 4-digit PIN security. | Python, JSON, Jupyter / Colab | [Open Notebook](https://github.com/harman170/harman170/blob/main/Bank_Management_System.ipynb) |
 | 🏥 **Medicine Donation Platform** | MERN stack application for real-time synchronization between medical donors and recipients. | MongoDB, Express, React, Node.js, Render | [View Repo](https://github.com/harman170/medicare-frontend) |
 | 📢 **CSE NoticeHub** | Centralized department notification system with real-time chat, media support, and authentication. | Flutter, Dart, Firebase | [View Profile](https://github.com/harman170) |
 | 🍷 **Wine Quality Prediction** | Comparative study evaluating 24 ML classification models to identify highest accuracy predictor. | Python, Scikit-learn, Pandas, Seaborn | [View Repo](https://github.com/harman170/Chatbot_With_Machine_Learning_Based_Intent_Classification) |
